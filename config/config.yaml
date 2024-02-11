@@ -17,18 +17,18 @@ data_validation:
   ALL_REQUIRED_FILES: ["train", "test", "validation"]
 
 
+# save transformed data in a new folder
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/samsum_dataset
+  tokenizer_name: google/pegasus-cnn_dailymail
 
-# data_transformation:
-#   root_dir: artifacts/data_transformation
-#   data_path: artifacts/data_ingestion/samsum_dataset
-#   tokenizer_name: google/pegasus-cnn_dailymail
 
-
-
-# model_trainer:
-#   root_dir: artifacts/model_trainer
-#   data_path: artifacts/data_transformation/samsum_dataset
-#   model_ckpt: google/pegasus-cnn_dailymail
+# save the model after training
+model_trainer:
+  root_dir: artifacts/model_trainer
+  data_path: artifacts/data_transformation/samsum_dataset
+  model_ckpt: google/pegasus-cnn_dailymail
 
 
 
